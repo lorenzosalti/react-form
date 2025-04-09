@@ -1,3 +1,5 @@
+import ArticlesList from "./components/ArticlesList"
+
 import { useState } from "react"
 
 const articles = ['Articolo 1', 'Articolo 2', 'Articolo 3', 'Articolo 4']
@@ -20,9 +22,10 @@ function App() {
     <>
       <h1>Blog di Articoli</h1>
 
-      <ul>
+      <ArticlesList data={articlesList} />
+      {/* <ul>
         {articlesList.map((article, i) => <li key={i}>{article}</li>)}
-      </ul>
+      </ul> */}
 
       <hr />
 
