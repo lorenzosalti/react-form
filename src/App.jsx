@@ -5,18 +5,19 @@ const articles = ['Articolo 1', 'Articolo 2', 'Articolo 3', 'Articolo 4']
 
 function App() {
 
+  const [articlesList, setArticlesList] = useState(articles)
   const [newArticle, setNewArticle] = useState('')
 
   const handleSubmit = event => {
     event.preventDefault()
-    console.log('submit')
+    setArticlesList([...articlesList, newArticle])
   }
 
   return (
     <>
       <h1>Nome del Blog</h1>
 
-      {articles.map((article, i) => <div key={i}>{article}</div>)}
+      {articlesList.map((article, i) => <div key={i}>{article}</div>)}
 
       <hr />
 
