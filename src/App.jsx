@@ -16,7 +16,7 @@ function App() {
     <>
       <h1>Nome del Blog</h1>
 
-      {articles.map(article => <div>{article}</div>)}
+      {articles.map((article, i) => <div key={i}>{article}</div>)}
 
       <hr />
 
