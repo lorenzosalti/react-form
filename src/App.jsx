@@ -11,6 +11,7 @@ function App() {
   const handleSubmit = event => {
     event.preventDefault()
     setArticlesList([...articlesList, newArticle])
+    setNewArticle('')
   }
 
   return (
